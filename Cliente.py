@@ -35,10 +35,8 @@ if __name__ == '__main__':
  if host=='':
   host = '127.0.0.1'
   
- #cria um socket
- tcp=socket(AF_INET,SOCK_STREAM)
+tcp=socket(AF_INET,SOCK_STREAM)
  send=Send()
- #cria um Thread e usa a função esperar com dois argumentos
  processo=Thread(target=esperar,args=(tcp,send,host))
  processo.start()
  print('')
